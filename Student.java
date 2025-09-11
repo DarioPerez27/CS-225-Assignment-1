@@ -11,7 +11,7 @@ public class Student{
         return Name;
 
     }
-
+    //Push test
     public String changeName(){
 
         Scanner scanner = new Scanner(System.in);
@@ -34,3 +34,4 @@ public class Student{
     }
 
 }
+//git push test
