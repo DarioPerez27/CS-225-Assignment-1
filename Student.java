@@ -22,13 +22,15 @@ public class Student{
     }
 
     public int getSSN(){
-
+        System.out.println("Enter social security number: ");
+        SSN = scanner.nextLine();
         return SSN;
 
     }
 
     public double getGPA(){
-
+        System.out.println("Enter current GPA: ");
+        GPA = scanner.nextLine();
         return GPA;
 
     }
