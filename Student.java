@@ -2,36 +2,39 @@ import java.util.Scanner;
 
 public class Student{
 
-    private String Name = "Dicky";
-    private int SSN = 123456789;
-    private double GPA = 4.0;
+    //Attributes
+    private String Name;
+    private int SSN;
+    private float GPA;
 
-    public String getname() {
-
-        return Name;
-
-    }
-    //Push test
-    public String changeName(){
-
+    //Constructor
+    public Student(){
+        //Getting Name
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter a name: ");
-        Name = scanner.nextLine();
-        return Name;
+        this.Name = scanner.nextLine();
 
+        //Getting SSN
+        System.out.println("Please enter a SSN: ");
+        this.SSN = Integer.parseInt(scanner.nextLine());
+
+        //Getting GPA
+        System.out.println("Please enter a GPA: ");
+        this.GPA = Float.parseFloat(scanner.nextLine());
     }
 
-    public int getSSN(){
+    //Accessors
+    public String getname() {return Name;}
+    public int getSSN(){return SSN;}
+    public double getGPA(){return GPA;}
 
-        return SSN;
+    //Mutators
+    public String changeSSN(){
+
+
 
     }
+    //toString
 
-    public double getGPA(){
-
-        return GPA;
-
-    }
-
+    //equals()
 }
-//git push test

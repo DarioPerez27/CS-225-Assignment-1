@@ -4,9 +4,9 @@ public class Main{
 
         Student student1 = new Student();
 
-        student1.changeName();
         System.out.println(student1.getname());
         System.out.println(student1.getGPA());
+        student1.changeSSN();
         System.out.println(student1.getSSN());
 
     }
