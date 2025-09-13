@@ -28,12 +28,6 @@ public class Student{
     public int getSSN(){return SSN;}
     public double getGPA(){return GPA;}
 
-    //Mutators
-    public String changeSSN(){
-
-
-
-    }
     //Mutator for SSN
     //Includes its own requesting code for SSN, maybe keep or continue to use the other one
     public String changeSSN() {
