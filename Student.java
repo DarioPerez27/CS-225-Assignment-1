@@ -30,6 +30,8 @@ public class Student{
 
     //Mutator for SSN
     //Includes its own requesting code for SSN, maybe keep or continue to use the other one
+    //We'll need to change the conditions for this because when the student class is called in the first place you input an SSN so we just need to make it so when it displays the SSN it uses the * stuff
+    //Basically what we need we just need to change the first few lines
     public String changeSSN() {
         Scanner scanner = new scanner(System.in);
         System.out.println("Enter SSN: ");
