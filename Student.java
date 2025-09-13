@@ -18,12 +18,6 @@ public class Student{
         System.out.println("Please enter a SSN: ");
         this.SSN = Integer.parseInt(scanner.nextLine());
 
-
-    public int getSSN(){
-        System.out.println("Enter social security number: ");
-        SSN = scanner.nextLine();
-        return SSN;
-
         //Getting GPA
         System.out.println("Please enter a GPA: ");
         this.GPA = Float.parseFloat(scanner.nextLine());
@@ -34,16 +28,30 @@ public class Student{
     public int getSSN(){return SSN;}
     public double getGPA(){return GPA;}
 
-    //Mutators
-    public String changeSSN(){
+    //Mutator for SSN
+    //Includes its own requesting code for SSN, maybe keep or continue to use the other one
+    //We'll need to change the conditions for this because when the student class is called in the first place you input an SSN so we just need to make it so when it displays the SSN it uses the * stuff
+    //Basically what we need we just need to change the first few lines
+    public String changeSSN() {
+        Scanner scanner = new scanner(System.in);
+        System.out.println("Enter SSN: ");
+        String input = scanner.nextLine();
 
-    public double getGPA(){
-        System.out.println("Enter current GPA: ");
-        GPA = scanner.nextLine();
-        return GPA;
+        if (input.length() > 4) {
+            String last4 = input.substring(input.length() - 4);
+            String masked = "*".repeat(input.length() -4) + last4;
+            try {
+                SSN = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid")
+            }
+            return masked;
+        } else {
+            System.out.println("Invalid SSN, must be longer than4 digits");
+            return null;
 
-
-    }
+}
     //toString
 
     //equals()
+}
