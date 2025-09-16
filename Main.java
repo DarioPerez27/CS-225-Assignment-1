@@ -4,18 +4,12 @@ public class Main {
 
         System.out.println("Enter details for Student 1:");
         Student student1 = new Student();
+        System.out.println(student1);
+        student1.changeSSN();
 
         System.out.println("\nEnter details for Student 2:");
         Student student2 = new Student();
-
-        System.out.println("\nStudent 1:");
-        System.out.println("Name: " + student1.getName());
-        System.out.println("GPA: " + student1.getGPA());
-        student1.changeSSN();
-
-        System.out.println("\nStudent 2:");
-        System.out.println("Name: " + student2.getName());
-        System.out.println("GPA: " + student2.getGPA());
+        System.out.println(student2);
         student2.changeSSN();
 
         // Use equals() to compare SSNs

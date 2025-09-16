@@ -23,6 +23,14 @@ public class Student {
         this.GPA = Float.parseFloat(scanner.nextLine());
     }
 
+    //toString Override for information display
+    @Override
+    public String toString(){
+
+        return "Student: " + Name + "\nGPA: " + GPA;
+
+    }
+
     //Accessors
     public String getName() {
         return Name;
@@ -40,7 +48,7 @@ public class Student {
         if (ssnStr.length() > 4) {
             String last4 = ssnStr.substring(ssnStr.length() - 4);
             String masked = "*".repeat(ssnStr.length() - 4) + last4;
-            System.out.println("SSN" + masked);
+            System.out.println("SSN: " + masked);
         } else {
             System.out.println("Invalid SSN, must be longer than 4 digits");
         }
@@ -49,7 +57,7 @@ public class Student {
     // Customized equals() comparing SSNs
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;  // same reference
+        if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
 
         Student other = (Student) obj;
@@ -62,5 +70,4 @@ public class Student {
         return Integer.hashCode(SSN);
     }
 
-    //toString
 }
